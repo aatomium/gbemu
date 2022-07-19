@@ -29,4 +29,18 @@ void getRomName(uint8_t* rom,char* name){
         name[j]=0;
     }
 }
+void insertData(uint8_t* memory,uint16_t adress,uint8_t data[],int size){
+        int k=0;
+        for(uint16_t i=adress;i<adress+size;i++){
+                memory[i] = data[k];
+                k++;
 
+        }
+
+}
+
+void get16Bytes(uint8_t* memory,uint16_t adress,uint8_t array[]){
+        for(int i=0;i<16;i++){
+                array[i] = memory[adress+i];
+        }
+}
