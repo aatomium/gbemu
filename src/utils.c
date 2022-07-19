@@ -13,7 +13,7 @@ void getBinary(uint8_t value,char* finalString){
             finalString[k] = '0';
         }
     };
-    finalString[9] = 0;
+    finalString[8] = 0;
 }
 void getBmp(uint8_t hex[],char* character){
     char convert[9];

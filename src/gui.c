@@ -27,7 +27,7 @@ int create_window()
 
 void drawBmp(char* binary,int x,int y){
     int z=0;
-    for (int i=y; i < y+16*4; i=i+4)
+    for (int i=y; i < y+8*4; i=i+4)
 	for(int j=x;j<x+16*4;j=j+4){
 	        if(binary[z]=='1'){
 			for(int w=0;w<4;w++){
