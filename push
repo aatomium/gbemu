@@ -3,5 +3,4 @@ git add emu
 git add make
 git add push
 git commit -m $1
-git push -u origin master << EOF
 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
