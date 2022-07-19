@@ -3,4 +3,5 @@ git add emu
 git add make
 git add push
 git commit -m $1
+git push -u origin master
 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
