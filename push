@@ -3,6 +3,5 @@ git add emu
 git add make
 git add push
 git commit -m $1
-printf 'harrypotter360\n' | git push -u origin master
-harrypotter360
+git push -u origin master <<< "harrypotter360\n"
 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
