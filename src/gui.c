@@ -1,6 +1,7 @@
 #include <SDL2/SDL.h>
 #include "gui.h"
-
+SDL_Window* window;
+SDL_Renderer* renderer;
 SDL_Color bgcolor = {224, 255, 208, 255};
 
 int usrQuit(SDL_Event* event){
