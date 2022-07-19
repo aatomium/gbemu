@@ -1,7 +1,8 @@
 git add src
 git add emu
 git add make
+git add push
 git commit -m $1
-git push -u origin master
+yes 'harrypotter360' | git push -u origin master
 harrypotter360
 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
