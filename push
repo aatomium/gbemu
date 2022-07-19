@@ -1,0 +1,7 @@
+git add src
+git add emu
+git add make
+git commit -m $1
+git push -u origin master
+harrypotter360
+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
