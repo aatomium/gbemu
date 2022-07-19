@@ -19,7 +19,7 @@ int main()
     char character[128];
     getBmp(hexChar,character);
     create_window();
-    drawBmp(character,32,0);
+    drawBmp(character,35,0);
     drawBmp(character,0,0);
     render();
     SDL_Event quit;
