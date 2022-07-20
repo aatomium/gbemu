@@ -14,7 +14,7 @@ void drawTile(uint8_t* memory,int number,int x,int y){
         uint16_t adress = 0x8000+number*16;
         uint8_t array[16];
         get16Bytes(memory,adress,array);
-        char tile[129];
+        char tile[64];
         getBmp(array,tile);
         drawBmp(tile,x,y);
 

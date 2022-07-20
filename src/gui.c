@@ -20,15 +20,15 @@ int create_window()
     renderer = SDL_CreateRenderer(window,-1,SDL_RENDERER_ACCELERATED);
     SDL_SetRenderDrawColor(renderer, 224, 255, 208, 255);
     SDL_RenderClear(renderer);
-    SDL_SetRenderDrawColor(renderer, 255, 0, 0, 255);
+    SDL_SetRenderDrawColor(renderer, 0, 0, 0, 255);
 
     return EXIT_SUCCESS;
 }
 
 void drawBmp(char* binary,int x,int y){
     int z=0;
-    for (int i=y; i < y+8*4; i=i+4)
-	for(int j=x;j<x+16*4;j=j+4){
+    for (int i=y; i<y+8*4; i=i+4)
+	for(int j=x;j<x+8*4;j=j+4){
 	        if(binary[z]=='1'){
 			for(int w=0;w<4;w++){
 				for(int q=0;q<4;q++){

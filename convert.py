@@ -1,4 +1,5 @@
-hex = input("Hexadecimal ? ")
+import sys
+hex = sys.argv[1]
 hex2 = ''
 a = 0
 j=0

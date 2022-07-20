@@ -18,12 +18,12 @@ void getBinary(uint8_t value,char* finalString){
 void getBmp(uint8_t hex[],char* character){
     char convert[9];
     int k=0;
-    for(int i=0;i<16;i++){
+    for(int i=0;i<16;i=i+2){
         getBinary(hex[i],convert);
         for(int j=0;j<8;j++){
                 character[k+j] = convert[j];
-        }
+	}
         k=k+8;
     }
-    character[128]=0;
+    character[64]=0;
 }
