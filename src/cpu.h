@@ -1,6 +1,7 @@
 #include <stdio.h>
 #include <stdint.h>
 #include <stdlib.h>
+#include <stdbool.h>
 struct reg {
         uint8_t a;
         uint8_t b;
@@ -9,6 +10,12 @@ struct reg {
         uint8_t e;
         uint8_t h;
         uint8_t l;
-        uint8_t sp;
-        uint8_t pc;
+        uint16_t sp;
+        uint16_t pc;
 }; extern struct reg registers;
+struct flag {
+	bool cy;
+	bool h;
+	bool nz;
+	bool z;
+}; extern struct flag flags;

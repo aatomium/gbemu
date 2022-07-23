@@ -5,3 +5,4 @@
 #include <string.h>
 
 void drawTile(uint8_t* memory,int number,int x,int y);
+void drawVram(uint8_t* memory);

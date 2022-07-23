@@ -3,13 +3,27 @@
 SDL_Window* window;
 SDL_Renderer* renderer;
 SDL_Color bgcolor = {224, 255, 208, 255};
+SDL_Color color1 = {136,192,112,255};
+SDL_Color color2 = {52,104,86,255};
+SDL_Color color3 = {8,24,32,255};
+
+//SDL_Color bgcolor = {241,242,218,1};
+//SDL_Color color1 = {255,206,150,1};
+//SDL_Color color2 = {255,119,119,1};
+//SDL_Color color3 = {0,48,59,1};
+
+SDL_Color* palette[4] = {&bgcolor,&color1,&color2,&color3};
 void setIcon(){
 	SDL_Surface* iconSurface;
         iconSurface = SDL_LoadBMP("icon.bmp");
         SDL_SetWindowIcon(window, iconSurface);
 
 }
-int usrQuit(SDL_Event* event){
+SDL_Event quit;
+int usrQuit(){
+	return testQuit(&quit);
+}
+int testQuit(SDL_Event* event){
         if(SDL_PollEvent(event)){
                 if(event->type == SDL_QUIT){
                         return 1;
@@ -46,15 +60,15 @@ void drawBmp(char* binary,int x,int y){
 		switch(binary[z])
 		{
 			case '1':
-				SDL_SetRenderDrawColor(renderer, 136, 192, 112, 255);
+				SDL_SetRenderDrawColor(renderer, palette[1]->r, palette[1]->g,palette[1]->b, palette[1]->a);
 				drawPixel(j,i);
 				break;
 			case '2':
-				SDL_SetRenderDrawColor(renderer, 52, 104, 86, 255);
+				SDL_SetRenderDrawColor(renderer, palette[2]->r, palette[2]->g,palette[2]->b, palette[2]->a);
 				drawPixel(j,i);
 				break;
 			case '3':
-				SDL_SetRenderDrawColor(renderer, 8, 24, 32, 255);
+				SDL_SetRenderDrawColor(renderer, palette[3]->r, palette[3]->g, palette[3]->b, palette[3]->a);
 				drawPixel(j,i);
 				break;
 		}

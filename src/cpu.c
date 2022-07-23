@@ -10,3 +10,9 @@ struct reg registers = {
 	0, //sp
 	0  //pc
 };
+struct flag flags = {
+	0, //cy
+	0, //h
+	0, //nz
+	0  //z
+};

@@ -19,3 +19,18 @@ void drawTile(uint8_t* memory,int number,int x,int y){
         drawBmp(tile,x,y);
 
 }
+void drawVram(uint8_t* memory){
+    int j=0;
+    int k=0;
+    for(int i=0x9800;i<0x9A33;i++){
+            drawTile(memory,memory[i],j,k);
+            j=j+32;
+            if(j==1024){
+                k=k+32;
+                j=0;
+            }
+    }
+}
+
+
+
